@@ -89,11 +89,11 @@ unsigned int num_of_color(unsigned int pattern, unsigned int color)
 {
 	unsigned int result = 0;
 	for(unsigned int i=0;i<4;i++){
-		printf("E_D: %d\n", extract_digit(pattern,i));
-		printf("color: %d\n", color);
+		// printf("E_D: %d\n", extract_digit(pattern,i));
+		// printf("color: %d\n", color);
 		if (extract_digit(pattern,i) == color)
 			result++;
-		printf("result: %d\n", result);
+		// printf("result: %d\n", result);
 	}
 	return result;
 }
@@ -111,8 +111,12 @@ unsigned int num_of_color(unsigned int pattern, unsigned int color)
 
 unsigned int count_exact_matches(unsigned int guess, unsigned int solution)
 {
-	fprintf(stderr,"count_exact_matches: Not yet implemented\n");
-	return 0;
+	unsigned int result = 0;
+	for(unsigned int i=0;i<4;i++) {
+		if(extract_digit(guess,i)==extract_digit(solution,i))
+			result++;
+	}
+	return result;
 }
 
 /* count_color_matches
@@ -128,8 +132,18 @@ unsigned int count_exact_matches(unsigned int guess, unsigned int solution)
 
 unsigned int count_color_matches(unsigned int guess, unsigned int solution)
 {
-	fprintf(stderr,"count_color_matches: Not yet implemented\n");
-	return 0;
+	unsigned int result = 0;
+	unsigned int guessnum=0;
+	unsigned int solnum=0;
+	for(unsigned int i=1;i<=6;i++) {
+	 	guessnum = num_of_color(guess,i);
+		solnum = num_of_color(solution,i);
+		if (guessnum < solnum)
+			result+=guessnum;
+		else
+			result+=solnum;
+	}
+	return result;
 }
 
 
@@ -145,7 +159,13 @@ unsigned int count_color_matches(unsigned int guess, unsigned int solution)
  */
 unsigned int get_guess_feedback(unsigned int guess, unsigned int solution)
 {
-	fprintf(stderr,"get_guess_feedback: Not yet implemented\n");
+	unsigned int exact = count_exact_matches(guess, solution);
+	unsigned int diff = guess-solution;
+	for(unsigned int i=0;i<4;i++){
+		if(extract_digit(diff,i)!=0){
+			
+		}
+	}
 	return 0;
 }
 
@@ -184,6 +204,7 @@ int main()
 
 	iresult = count_exact_matches(3413, 2315);
 	iresult = count_color_matches(3413, 2315);
+	// printf("colormatch(3413,2315): %d\n", iresulst);
 	iresult = get_guess_feedback(3413, 2315);
 
 }
