@@ -16,6 +16,8 @@ int main(){
   printf("read data of %d days, and %d records per day. \n",
       num_days, num_records_per_day);
 
+  printf("huh?");
+
   // print the data
   // for (int i = 0; i < num_days; ++i){
   //   for (int j = 0; j < num_records_per_day; ++j){
