@@ -18,16 +18,16 @@ int main(){
 
   printf("huh?");
 
-  // print the data
-  // for (int i = 0; i < num_days; ++i){
-  //   for (int j = 0; j < num_records_per_day; ++j){
-  //     if (rs[i][j] == NULL){
-  //       printf("data of day %d and rank %d does not exist\n", i+1, j+1);
-  //     } else {
-  //       print_record(rs[i][j]);
-  //     }
-  //   }
-  // }
+  print the data
+  for (int i = 0; i < num_days; ++i){
+    for (int j = 0; j < num_records_per_day; ++j){
+      if (rs[i][j] == NULL){
+        printf("data of day %d and rank %d does not exist\n", i+1, j+1);
+      } else {
+        print_record(rs[i][j]);
+      }
+    }
+  }
 
   // free memories
   printf("before function");
