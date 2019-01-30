@@ -18,7 +18,7 @@ int main(){
 
   printf("huh?");
 
-  print the data
+  // print the data
   for (int i = 0; i < num_days; ++i){
     for (int j = 0; j < num_records_per_day; ++j){
       if (rs[i][j] == NULL){
