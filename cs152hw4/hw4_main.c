@@ -28,9 +28,9 @@ int main(){
   // }
 
   // free memories
-  printf("before function")
-  find_highest_record_by_date("2017-12-25",rs,num_days)
-  printf("after function")
+  printf("before function");
+  find_highest_record_by_date("2017-12-25",rs,num_days);
+  printf("after function");
   free_records(rs, num_days, num_records_per_day);
   return 0;
 }

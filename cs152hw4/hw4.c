@@ -17,5 +17,5 @@ record* find_highest_record_by_date(const char* date, record*** rs,
           printf("date found");
         }
       }
-
+      return NULL;
     }
