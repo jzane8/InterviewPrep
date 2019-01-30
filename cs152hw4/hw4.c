@@ -14,10 +14,10 @@ record* find_highest_record_by_date(const char* date, record*** rs,
       struct tm* convDate = malloc(1+sizeof(struct tm));
       strptime(date, "%F", convDate);
       //second: find the record!
-      for(int i = 0; i < num_days; ++i) {
-        if((rs[i][0])->date == convDate) {
-          printf("date found");
-        }
-      }
+      // for(int i = 0; i < num_days; ++i) {
+      //   if((rs[i][0])->date == convDate) {
+      //     printf("date found");
+      //   }
+      // }
       return NULL;
     }
