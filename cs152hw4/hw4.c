@@ -22,7 +22,7 @@ record* find_highest_record_by_date(const char* date, record*** rs,
             printf("date found");
           }
         } else {
-          printf("ain't nothing here bitch")
+          printf("ain't nothing here bitch");
         }
       }
       return NULL;
