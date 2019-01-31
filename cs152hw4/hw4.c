@@ -25,8 +25,8 @@ record* find_highest_record_by_date(const char* date, record*** rs,
         if(rs[i][0] != NULL) {
           printf("found somethin\n");
           print_record(rs[i][0]);
-          difftm = (int)difftime(convDate,(rs[i][0])->date);
-          print("difftm: %d\n", difftm);
+          difftm = difftime(convDate,(rs[i][0])->date);
+          // print("difftm: %d\n", difftm);
           if(difftm == 0) {
             printf("date found");
           }
