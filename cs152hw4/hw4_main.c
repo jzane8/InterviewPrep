@@ -19,6 +19,7 @@ int main(){
   printf("huh?");
 
   // print the data
+  printf("reeee %lu\n%d\n",sizeof(rs),num_days);
   for (int i = 0; i < num_days; ++i){
     for (int j = 0; j < num_records_per_day; ++j){
       if (rs[i][j] == NULL){
