@@ -18,11 +18,13 @@ record* find_highest_record_by_date(const char* date, record*** rs,
       //second: find the record!
       for(int i = 0; i < num_days; ++i) {
         if(rs[i][0] != NULL) {
+          printf("found somethin\n")
+          print_record(rs[i][0]);
           if((rs[i][0])->date == convDate) {
             printf("date found");
           }
         } else {
-          printf("ain't nothing here bitch");
+          printf("ain't nothing here bitch\n");
         }
       }
       return NULL;
