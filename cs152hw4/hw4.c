@@ -17,7 +17,7 @@ record* find_highest_record_by_date(const char* date, record*** rs,
       printf("%lu\n%d",sizeof(rs),num_days);
       //second: find the record!
       char buffer[26];
-      printf("convDate:\n")
+      printf("convDate:\n");
       strftime(buffer, 26, "%Y-%m-%d", convDate);
       puts(buffer);
       for(int i = 0; i < num_days; ++i) {
