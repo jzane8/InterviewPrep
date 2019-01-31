@@ -20,11 +20,14 @@ record* find_highest_record_by_date(const char* date, record*** rs,
       printf("convDate:\n");
       strftime(buffer, 26, "%Y-%m-%d", convDate);
       puts(buffer);
+      double difftm;
       for(int i = 0; i < num_days; ++i) {
         if(rs[i][0] != NULL) {
           printf("found somethin\n");
           print_record(rs[i][0]);
-          if((rs[i][0])->date == convDate) {
+          difftm = (int)difftime(convDate,(rs[i][0])->date);
+          print("difftm: %d\n", difftm);
+          if(difftm == 0) {
             printf("date found");
           }
         } else {
